@@ -1,0 +1,1729 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						43,
+						44,
+						46
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-49cc86f1ba224ec73bbd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						7,
+						9,
+						13,
+						14,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						97
+					]
+				},
+				{
+					"build" : "test",
+					"jsonFile" : "directory-test-Debug-451c0598f41488bb20b9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						36
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/antenna",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.antenna-Debug-587d5f600fdecdcef86f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/antenna",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "src/aodv",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.aodv-Debug-b71f76d0a293aa839cfa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/aodv",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/applications",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.applications-Debug-04183f88c13dc4415af9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/applications",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/bridge",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.bridge-Debug-1095eb327466ec24aa54.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/bridge",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/brite",
+					"jsonFile" : "directory-src.brite-Debug-baf80d3eec2e9fed540e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/brite"
+				},
+				{
+					"build" : "src/buildings",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.buildings-Debug-973ce8500fcfaaaae939.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/buildings",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "src/click",
+					"jsonFile" : "directory-src.click-Debug-7cebb1166adddd72a2e3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/click"
+				},
+				{
+					"build" : "src/config-store",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.config-store-Debug-305999d156b852818e42.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/config-store",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "src/core",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.core-Debug-108a575f7490bb6b669c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/core",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "src/csma",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.csma-Debug-f5ab618fd6967b9964ce.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/csma",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "src/csma-layout",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.csma-layout-Debug-96481c60c50484e407a4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/csma-layout",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "src/dsdv",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.dsdv-Debug-70668994de4e7f4defd2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/dsdv",
+					"targetIndexes" : 
+					[
+						15
+					]
+				},
+				{
+					"build" : "src/dsr",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.dsr-Debug-351f2e80e395747c2896.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/dsr",
+					"targetIndexes" : 
+					[
+						16
+					]
+				},
+				{
+					"build" : "src/energy",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.energy-Debug-11a87b0fc2ab9370ff81.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/energy",
+					"targetIndexes" : 
+					[
+						17
+					]
+				},
+				{
+					"build" : "src/fd-net-device",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.fd-net-device-Debug-4d7520c0d809da9d8b8a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/fd-net-device",
+					"targetIndexes" : 
+					[
+						18,
+						35,
+						52,
+						94,
+						96
+					]
+				},
+				{
+					"build" : "src/flow-monitor",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.flow-monitor-Debug-ea59d95402f834a79443.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/flow-monitor",
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"build" : "src/internet",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.internet-Debug-1ec4beba54358e882578.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/internet",
+					"targetIndexes" : 
+					[
+						20
+					]
+				},
+				{
+					"build" : "src/internet-apps",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.internet-apps-Debug-538dcfc12aa7584b81c5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/internet-apps",
+					"targetIndexes" : 
+					[
+						21
+					]
+				},
+				{
+					"build" : "src/lr-wpan",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.lr-wpan-Debug-a97381af727cc1eb75cb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/lr-wpan",
+					"targetIndexes" : 
+					[
+						22
+					]
+				},
+				{
+					"build" : "src/lte",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.lte-Debug-51f8a0f6ce94c073a541.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/lte",
+					"targetIndexes" : 
+					[
+						23
+					]
+				},
+				{
+					"build" : "src/mesh",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.mesh-Debug-a160f2490aec38e36535.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/mesh",
+					"targetIndexes" : 
+					[
+						24
+					]
+				},
+				{
+					"build" : "src/mobility",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.mobility-Debug-8e6311e54c9d42b97be7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/mobility",
+					"targetIndexes" : 
+					[
+						25
+					]
+				},
+				{
+					"build" : "src/netanim",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.netanim-Debug-3192751b25f1aef47a0e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/netanim",
+					"targetIndexes" : 
+					[
+						26
+					]
+				},
+				{
+					"build" : "src/network",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.network-Debug-d0ce16177b87f30070e5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/network",
+					"targetIndexes" : 
+					[
+						27
+					]
+				},
+				{
+					"build" : "src/nix-vector-routing",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.nix-vector-routing-Debug-74df0995527037e57d0c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/nix-vector-routing",
+					"targetIndexes" : 
+					[
+						28
+					]
+				},
+				{
+					"build" : "src/olsr",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.olsr-Debug-35aeb127e7bfa46db997.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/olsr",
+					"targetIndexes" : 
+					[
+						29
+					]
+				},
+				{
+					"build" : "src/openflow",
+					"jsonFile" : "directory-src.openflow-Debug-82f3d728c74ed8a29acd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/openflow"
+				},
+				{
+					"build" : "src/point-to-point",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.point-to-point-Debug-6eac715c3ff47127840e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/point-to-point",
+					"targetIndexes" : 
+					[
+						31
+					]
+				},
+				{
+					"build" : "src/point-to-point-layout",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.point-to-point-layout-Debug-c82388a55401aa968e3b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/point-to-point-layout",
+					"targetIndexes" : 
+					[
+						32
+					]
+				},
+				{
+					"build" : "src/propagation",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.propagation-Debug-284eba6bf701446f5dc2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/propagation",
+					"targetIndexes" : 
+					[
+						34
+					]
+				},
+				{
+					"build" : "src/sixlowpan",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.sixlowpan-Debug-e2eb1aa96b366755231f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/sixlowpan",
+					"targetIndexes" : 
+					[
+						41
+					]
+				},
+				{
+					"build" : "src/spectrum",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.spectrum-Debug-a89c8cd922b92c55500b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/spectrum",
+					"targetIndexes" : 
+					[
+						42
+					]
+				},
+				{
+					"build" : "src/stats",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.stats-Debug-411027cb7e5b5a6b860b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/stats",
+					"targetIndexes" : 
+					[
+						49
+					]
+				},
+				{
+					"build" : "src/tap-bridge",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.tap-bridge-Debug-85c81402d40a627136a0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/tap-bridge",
+					"targetIndexes" : 
+					[
+						50,
+						51,
+						95
+					]
+				},
+				{
+					"build" : "src/topology-read",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.topology-read-Debug-87edde8a930ce2e3a2c7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/topology-read",
+					"targetIndexes" : 
+					[
+						53
+					]
+				},
+				{
+					"build" : "src/traffic-control",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.traffic-control-Debug-bd5129dabda8dedee105.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/traffic-control",
+					"targetIndexes" : 
+					[
+						54
+					]
+				},
+				{
+					"build" : "src/uan",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.uan-Debug-d977b42bcbea861f894c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/uan",
+					"targetIndexes" : 
+					[
+						55
+					]
+				},
+				{
+					"build" : "src/virtual-net-device",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.virtual-net-device-Debug-4e90474397e6e7f0f9fa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/virtual-net-device",
+					"targetIndexes" : 
+					[
+						98
+					]
+				},
+				{
+					"build" : "src/wifi",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.wifi-Debug-ec75359f9c34831ecc4f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/wifi",
+					"targetIndexes" : 
+					[
+						99
+					]
+				},
+				{
+					"build" : "src/wimax",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.wimax-Debug-cbf76d6a2364c2613c8d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/wimax",
+					"targetIndexes" : 
+					[
+						100
+					]
+				},
+				{
+					"build" : "examples",
+					"jsonFile" : "directory-examples-Debug-1c8b83b621b6ef38a245.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples"
+				},
+				{
+					"build" : "scratch",
+					"childIndexes" : 
+					[
+						45
+					],
+					"jsonFile" : "directory-scratch-Debug-84c3d4857e140a6d4723.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "scratch",
+					"targetIndexes" : 
+					[
+						39,
+						40
+					]
+				},
+				{
+					"build" : "scratch/nested-subdir",
+					"jsonFile" : "directory-scratch.nested-subdir-Debug-d5218adf067b73e1d13a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 0,
+					"source" : "scratch/nested-subdir",
+					"targetIndexes" : 
+					[
+						37,
+						38
+					]
+				},
+				{
+					"build" : "utils",
+					"jsonFile" : "directory-utils-Debug-ecc62ddb27eede1f7ffa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "utils",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						30,
+						33
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46
+					],
+					"name" : "NS3",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						97,
+						98,
+						99,
+						100
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "antenna::@000737a0949b1597daab",
+					"jsonFile" : "target-antenna-Debug-f2858e2082bc31a56c57.json",
+					"name" : "antenna",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "aodv::@703ac9d15d05cf47735c",
+					"jsonFile" : "target-aodv-Debug-eebaba399e892f07837b.json",
+					"name" : "aodv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "applications::@a48e303ef543a0192510",
+					"jsonFile" : "target-applications-Debug-50e9165170f74b1c7a4c.json",
+					"name" : "applications",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 46,
+					"id" : "bench-packets::@c810615cce0f7acb82dc",
+					"jsonFile" : "target-bench-packets-Debug-057eded50635a19d68e9.json",
+					"name" : "bench-packets",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 46,
+					"id" : "bench-scheduler::@c810615cce0f7acb82dc",
+					"jsonFile" : "target-bench-scheduler-Debug-711a2679981c5f582a75.json",
+					"name" : "bench-scheduler",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "bridge::@e12754a9402ac756973a",
+					"jsonFile" : "target-bridge-Debug-05fae2fe1823f70f8461.json",
+					"name" : "bridge",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "buildings::@2d6478ec4a24b1f7bdbd",
+					"jsonFile" : "target-buildings-Debug-778c6ad8db4483bb8df4.json",
+					"name" : "buildings",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "check-version::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check-version-Debug-1330ecb73cf981e7a3b1.json",
+					"name" : "check-version",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "config-store::@0a448824ace9838c932a",
+					"jsonFile" : "target-config-store-Debug-2fa73419ef2e1d2285fb.json",
+					"name" : "config-store",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "copy_all_headers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-copy_all_headers-Debug-6496924c432f0346d4c3.json",
+					"name" : "copy_all_headers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "core::@0618756b1ff51bca1a0e",
+					"jsonFile" : "target-core-Debug-3399101a4b80dfbe9945.json",
+					"name" : "core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "csma::@457f510286be5371199b",
+					"jsonFile" : "target-csma-Debug-1eda4a25f30990646c7f.json",
+					"name" : "csma",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "csma-layout::@48fc5a83301e8b2154b7",
+					"jsonFile" : "target-csma-layout-Debug-25e12c2e897223e5669f.json",
+					"name" : "csma-layout",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doxygen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doxygen-Debug-70513d9cc2fddb737d24.json",
+					"name" : "doxygen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doxygen-no-build::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doxygen-no-build-Debug-38db810bf17c34cdc47d.json",
+					"name" : "doxygen-no-build",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "dsdv::@a0c6dcb543260f52cf14",
+					"jsonFile" : "target-dsdv-Debug-04d6be433c6de1fdbbc2.json",
+					"name" : "dsdv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "dsr::@550d70055e3c4298d239",
+					"jsonFile" : "target-dsr-Debug-3edd8b51a05695338725.json",
+					"name" : "dsr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "energy::@64b7acd7d729390dea74",
+					"jsonFile" : "target-energy-Debug-2f56874d2be2faa03d57.json",
+					"name" : "energy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "fd-net-device::@556bfae050776c5ab597",
+					"jsonFile" : "target-fd-net-device-Debug-35879543d9f613994600.json",
+					"name" : "fd-net-device",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "flow-monitor::@6febb32c3c87917add27",
+					"jsonFile" : "target-flow-monitor-Debug-19feefc7d0f1da17f257.json",
+					"name" : "flow-monitor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "internet::@cf20f20ea777b8d334b4",
+					"jsonFile" : "target-internet-Debug-4b555dc9295bbcee4b31.json",
+					"name" : "internet",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 20,
+					"id" : "internet-apps::@1ed805a9b59b824e59c4",
+					"jsonFile" : "target-internet-apps-Debug-f2d1aeb75b5a5081a3ef.json",
+					"name" : "internet-apps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "lr-wpan::@45be7a455a5f76cbc3d2",
+					"jsonFile" : "target-lr-wpan-Debug-d8a7bcdee3cb5cfdd87b.json",
+					"name" : "lr-wpan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 22,
+					"id" : "lte::@f1c97db8cc3fcef38804",
+					"jsonFile" : "target-lte-Debug-7854e667d17f69289827.json",
+					"name" : "lte",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 23,
+					"id" : "mesh::@cce4ee0a9712f6aa4327",
+					"jsonFile" : "target-mesh-Debug-3e9177b065b0d0616af4.json",
+					"name" : "mesh",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "mobility::@2e8c3d564dbe2f6b990d",
+					"jsonFile" : "target-mobility-Debug-d2bf471b0be99f6c953a.json",
+					"name" : "mobility",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 25,
+					"id" : "netanim::@bd6b8f954589cac10ad0",
+					"jsonFile" : "target-netanim-Debug-8265e2d9a5b8b1c0d028.json",
+					"name" : "netanim",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 26,
+					"id" : "network::@311edf953348ef8fadde",
+					"jsonFile" : "target-network-Debug-4aa2a9e29c2be6f37f8c.json",
+					"name" : "network",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 27,
+					"id" : "nix-vector-routing::@800bede72ec51c5d10cf",
+					"jsonFile" : "target-nix-vector-routing-Debug-bd6278a77d5d63a5b208.json",
+					"name" : "nix-vector-routing",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 28,
+					"id" : "olsr::@e5a27e9f0eef592590bf",
+					"jsonFile" : "target-olsr-Debug-77e659ec5c5a143a7001.json",
+					"name" : "olsr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 46,
+					"id" : "perf-io::@c810615cce0f7acb82dc",
+					"jsonFile" : "target-perf-io-Debug-79dbc30e5605e37a7d3d.json",
+					"name" : "perf-io",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 30,
+					"id" : "point-to-point::@440f5f261b9566ce758a",
+					"jsonFile" : "target-point-to-point-Debug-4c6580289cbb8ea7a546.json",
+					"name" : "point-to-point",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 31,
+					"id" : "point-to-point-layout::@f2be237e8973ad8e8738",
+					"jsonFile" : "target-point-to-point-layout-Debug-0bab82714008bc55bdd2.json",
+					"name" : "point-to-point-layout",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 46,
+					"id" : "print-introspected-doxygen::@c810615cce0f7acb82dc",
+					"jsonFile" : "target-print-introspected-doxygen-Debug-edeb9e488ffb1be98ef3.json",
+					"name" : "print-introspected-doxygen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 32,
+					"id" : "propagation::@e1205667d4949730ed2e",
+					"jsonFile" : "target-propagation-Debug-b7c08a8fe47b5002b852.json",
+					"name" : "propagation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "raw-sock-creator::@556bfae050776c5ab597",
+					"jsonFile" : "target-raw-sock-creator-Debug-9513ae2440462bb4e6ec.json",
+					"name" : "raw-sock-creator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "run-tests::@36f028580bb02cc8272a",
+					"jsonFile" : "target-run-tests-Debug-ce50e887b42ceeba4e3e.json",
+					"name" : "run-tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 45,
+					"id" : "scratch-nested-subdir-lib::@0af2a42ff7ab2a87b8ee",
+					"jsonFile" : "target-scratch-nested-subdir-lib-Debug-2e3ca8480c3c89a9dec0.json",
+					"name" : "scratch-nested-subdir-lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 45,
+					"id" : "scratch_nested-subdir_scratch-nested-subdir-executable::@0af2a42ff7ab2a87b8ee",
+					"jsonFile" : "target-scratch_nested-subdir_scratch-nested-subdir-executable-Debug-55b2fcdabf29dc2db3da.json",
+					"name" : "scratch_nested-subdir_scratch-nested-subdir-executable",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 44,
+					"id" : "scratch_scratch-simulator::@12119f3906236ec082b9",
+					"jsonFile" : "target-scratch_scratch-simulator-Debug-d212f5c6610a0f3b617b.json",
+					"name" : "scratch_scratch-simulator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 44,
+					"id" : "scratch_subdir_scratch-subdir::@12119f3906236ec082b9",
+					"jsonFile" : "target-scratch_subdir_scratch-subdir-Debug-19e73d21bc013e5b4859.json",
+					"name" : "scratch_subdir_scratch-subdir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 33,
+					"id" : "sixlowpan::@e4181c97e2610be1aaf4",
+					"jsonFile" : "target-sixlowpan-Debug-f6dd039cc70c04799831.json",
+					"name" : "sixlowpan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 34,
+					"id" : "spectrum::@edd78237c376ce4d0dc6",
+					"jsonFile" : "target-spectrum-Debug-8adc46521c75aad665fa.json",
+					"name" : "spectrum",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sphinx::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sphinx-Debug-c4d8fdf4b2bbdc69891c.json",
+					"name" : "sphinx",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sphinx_contributing::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sphinx_contributing-Debug-b3a4b5169e3a1548a2d3.json",
+					"name" : "sphinx_contributing",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sphinx_installation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sphinx_installation-Debug-53308b34355bebb7c055.json",
+					"name" : "sphinx_installation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sphinx_manual::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sphinx_manual-Debug-3c21415fe9631683964c.json",
+					"name" : "sphinx_manual",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sphinx_models::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sphinx_models-Debug-fdd005f1792a8d4be13c.json",
+					"name" : "sphinx_models",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sphinx_tutorial::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sphinx_tutorial-Debug-b874313985d73b96e108.json",
+					"name" : "sphinx_tutorial",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 35,
+					"id" : "stats::@a16f7aa18ccba9be6aba",
+					"jsonFile" : "target-stats-Debug-134f33da0317044b5ceb.json",
+					"name" : "stats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 36,
+					"id" : "tap-bridge::@41c2f7889af4d596f671",
+					"jsonFile" : "target-tap-bridge-Debug-09ec7c526a0b872a6a5f.json",
+					"name" : "tap-bridge",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 36,
+					"id" : "tap-creator::@41c2f7889af4d596f671",
+					"jsonFile" : "target-tap-creator-Debug-056a8a42d84115bdf581.json",
+					"name" : "tap-creator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "tap-device-creator::@556bfae050776c5ab597",
+					"jsonFile" : "target-tap-device-creator-Debug-828e4fafc67760064cd1.json",
+					"name" : "tap-device-creator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 37,
+					"id" : "topology-read::@abe77e73d3f20d731926",
+					"jsonFile" : "target-topology-read-Debug-1df341936761f7c5e732.json",
+					"name" : "topology-read",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 38,
+					"id" : "traffic-control::@5510e62c9c27dee44e6c",
+					"jsonFile" : "target-traffic-control-Debug-69099ff465894f25e8e3.json",
+					"name" : "traffic-control",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 39,
+					"id" : "uan::@b2ca6ee95032a5560205",
+					"jsonFile" : "target-uan-Debug-5bfd388981d8c9905b33.json",
+					"name" : "uan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Debug-f47af494541a8a975c29.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_antenna::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_antenna-Debug-10dcaa17c905a4543688.json",
+					"name" : "uninstall_pkgconfig_antenna",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_aodv::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_aodv-Debug-8df04e01546018082936.json",
+					"name" : "uninstall_pkgconfig_aodv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_applications::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_applications-Debug-38677a18247a56fb28a2.json",
+					"name" : "uninstall_pkgconfig_applications",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_bridge::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_bridge-Debug-7c6587a5848005076831.json",
+					"name" : "uninstall_pkgconfig_bridge",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_buildings::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_buildings-Debug-68975f39d37f9c8697f3.json",
+					"name" : "uninstall_pkgconfig_buildings",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_config-store::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_config-store-Debug-cbfef7e6846b2aea55fb.json",
+					"name" : "uninstall_pkgconfig_config-store",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_core::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_core-Debug-ed0a9ca3c5bad7f17637.json",
+					"name" : "uninstall_pkgconfig_core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_csma::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_csma-Debug-d45a3641a1ec336fe724.json",
+					"name" : "uninstall_pkgconfig_csma",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_csma-layout::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_csma-layout-Debug-f71a68faaed045ba03a1.json",
+					"name" : "uninstall_pkgconfig_csma-layout",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_dsdv::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_dsdv-Debug-4e3e491c1e924e0bfbd1.json",
+					"name" : "uninstall_pkgconfig_dsdv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_dsr::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_dsr-Debug-3d88e048fefe9258cd13.json",
+					"name" : "uninstall_pkgconfig_dsr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_energy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_energy-Debug-53dc47914233332d5165.json",
+					"name" : "uninstall_pkgconfig_energy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_fd-net-device::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_fd-net-device-Debug-5497ba6c6cf884508f5a.json",
+					"name" : "uninstall_pkgconfig_fd-net-device",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_flow-monitor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_flow-monitor-Debug-7c1279322e163905ce42.json",
+					"name" : "uninstall_pkgconfig_flow-monitor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_internet::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_internet-Debug-871b780a29a92ecf3751.json",
+					"name" : "uninstall_pkgconfig_internet",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_internet-apps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_internet-apps-Debug-fdfec377239444b2107d.json",
+					"name" : "uninstall_pkgconfig_internet-apps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_lr-wpan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_lr-wpan-Debug-a3bd2489c3efe798078f.json",
+					"name" : "uninstall_pkgconfig_lr-wpan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_lte::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_lte-Debug-290e3d264599f8a07b74.json",
+					"name" : "uninstall_pkgconfig_lte",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_mesh::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_mesh-Debug-7f29b783bb6e3a127d91.json",
+					"name" : "uninstall_pkgconfig_mesh",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_mobility::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_mobility-Debug-265062919e8ec39f37b2.json",
+					"name" : "uninstall_pkgconfig_mobility",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_netanim::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_netanim-Debug-7866d2fc25fc2fc173aa.json",
+					"name" : "uninstall_pkgconfig_netanim",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_network::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_network-Debug-6f0e29272c73530df7de.json",
+					"name" : "uninstall_pkgconfig_network",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_nix-vector-routing::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_nix-vector-routing-Debug-79c80c7f43289816eada.json",
+					"name" : "uninstall_pkgconfig_nix-vector-routing",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_olsr::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_olsr-Debug-f094760e387650d3585d.json",
+					"name" : "uninstall_pkgconfig_olsr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_point-to-point::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_point-to-point-Debug-4e9e820dbf07758ccc73.json",
+					"name" : "uninstall_pkgconfig_point-to-point",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_point-to-point-layout::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_point-to-point-layout-Debug-e66f088d40f80afe713e.json",
+					"name" : "uninstall_pkgconfig_point-to-point-layout",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_propagation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_propagation-Debug-663e081a8021ff14fca3.json",
+					"name" : "uninstall_pkgconfig_propagation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_sixlowpan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_sixlowpan-Debug-9bcaf2a7230c6e5d5a2e.json",
+					"name" : "uninstall_pkgconfig_sixlowpan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_spectrum::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_spectrum-Debug-40927d3255441b9d9bea.json",
+					"name" : "uninstall_pkgconfig_spectrum",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_stats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_stats-Debug-89111fcf487add80d11c.json",
+					"name" : "uninstall_pkgconfig_stats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_tap-bridge::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_tap-bridge-Debug-0b63dedd297a26032429.json",
+					"name" : "uninstall_pkgconfig_tap-bridge",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_topology-read::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_topology-read-Debug-b85f93b2b3b6ed658c94.json",
+					"name" : "uninstall_pkgconfig_topology-read",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_traffic-control::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_traffic-control-Debug-d90eda1483c5f6749909.json",
+					"name" : "uninstall_pkgconfig_traffic-control",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_uan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_uan-Debug-d0b46ff80506a2bf8b7b.json",
+					"name" : "uninstall_pkgconfig_uan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_virtual-net-device::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_virtual-net-device-Debug-f1138f0f2f077b7a4eed.json",
+					"name" : "uninstall_pkgconfig_virtual-net-device",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_wifi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_wifi-Debug-ca7a5bf58f2673659dc9.json",
+					"name" : "uninstall_pkgconfig_wifi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_wimax::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_wimax-Debug-45dc6428460a743a4032.json",
+					"name" : "uninstall_pkgconfig_wimax",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "uninstall_raw-sock-creator::@556bfae050776c5ab597",
+					"jsonFile" : "target-uninstall_raw-sock-creator-Debug-3d7070d353ed7d50ad48.json",
+					"name" : "uninstall_raw-sock-creator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 36,
+					"id" : "uninstall_tap-creator::@41c2f7889af4d596f671",
+					"jsonFile" : "target-uninstall_tap-creator-Debug-d11ab3819540beda4891.json",
+					"name" : "uninstall_tap-creator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "uninstall_tap-device-creator::@556bfae050776c5ab597",
+					"jsonFile" : "target-uninstall_tap-device-creator-Debug-c043142e51a546595bb0.json",
+					"name" : "uninstall_tap-device-creator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "update_doxygen_version::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-update_doxygen_version-Debug-7b3eeadf8871d2ee7bb8.json",
+					"name" : "update_doxygen_version",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 40,
+					"id" : "virtual-net-device::@7550cbb5e76b22ae209d",
+					"jsonFile" : "target-virtual-net-device-Debug-d6eceb670fbc0e30c1ba.json",
+					"name" : "virtual-net-device",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 41,
+					"id" : "wifi::@7d28256f07142c24adbf",
+					"jsonFile" : "target-wifi-Debug-f55c43615c223d11c2cf.json",
+					"name" : "wifi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 42,
+					"id" : "wimax::@487b93290c50ee31c181",
+					"jsonFile" : "target-wimax-Debug-a7716a325cb256054ed1.json",
+					"name" : "wimax",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/build",
+		"source" : "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

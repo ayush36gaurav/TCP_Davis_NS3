@@ -1,0 +1,1261 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      The system is: Linux - 6.8.0-48-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-lrn1IG"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-lrn1IG"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-lrn1IG'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_adffc/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_adffc.dir/build.make CMakeFiles/cmTC_adffc.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-lrn1IG'
+        Building CXX object CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_adffc.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_adffc.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccujWsK3.s
+        GNU C++17 (Ubuntu 13.2.0-23ubuntu4) version 13.2.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/13"
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/include/c++/13
+         /usr/include/x86_64-linux-gnu/c++/13
+         /usr/include/c++/13/backward
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 4e0f319cd9945d8f5a9eeeeec1481ba5
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_adffc.dir/'
+         as -v --64 -o CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccujWsK3.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_adffc
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_adffc.dir/link.txt --verbose=1
+        /usr/bin/c++  -v CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_adffc 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_adffc' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_adffc.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoLMIqh.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_adffc /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_adffc' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_adffc.'
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-lrn1IG'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/include/c++/13]
+          add: [/usr/include/x86_64-linux-gnu/c++/13]
+          add: [/usr/include/c++/13/backward]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/include/c++/13] ==> [/usr/include/c++/13]
+        collapse include dir [/usr/include/x86_64-linux-gnu/c++/13] ==> [/usr/include/x86_64-linux-gnu/c++/13]
+        collapse include dir [/usr/include/c++/13/backward] ==> [/usr/include/c++/13/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/13;/usr/include/x86_64-linux-gnu/c++/13;/usr/include/c++/13/backward;/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-lrn1IG']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_adffc/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_adffc.dir/build.make CMakeFiles/cmTC_adffc.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-lrn1IG']
+        ignore line: [Building CXX object CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_adffc.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_adffc.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccujWsK3.s]
+        ignore line: [GNU C++17 (Ubuntu 13.2.0-23ubuntu4) version 13.2.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/13"]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/include/c++/13]
+        ignore line: [ /usr/include/x86_64-linux-gnu/c++/13]
+        ignore line: [ /usr/include/c++/13/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 4e0f319cd9945d8f5a9eeeeec1481ba5]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_adffc.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccujWsK3.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_adffc]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_adffc.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_adffc ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_adffc' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_adffc.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoLMIqh.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_adffc /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccoLMIqh.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_adffc] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [CMakeFiles/cmTC_adffc.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HHIK4A"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HHIK4A"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HHIK4A'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_862a8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_862a8.dir/build.make CMakeFiles/cmTC_862a8.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HHIK4A'
+        Building C object CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_862a8.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_862a8.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccMnyl7a.s
+        GNU C17 (Ubuntu 13.2.0-23ubuntu4) version 13.2.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 35e51c4ef55ea8f6b448d85f0fac5984
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_862a8.dir/'
+         as -v --64 -o CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o /tmp/ccMnyl7a.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_862a8
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_862a8.dir/link.txt --verbose=1
+        /usr/bin/cc  -v CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o -o cmTC_862a8 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_862a8' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_862a8.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVAgbLu.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_862a8 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_862a8' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_862a8.'
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HHIK4A'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HHIK4A']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_862a8/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_862a8.dir/build.make CMakeFiles/cmTC_862a8.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HHIK4A']
+        ignore line: [Building C object CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_862a8.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_862a8.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccMnyl7a.s]
+        ignore line: [GNU C17 (Ubuntu 13.2.0-23ubuntu4) version 13.2.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 35e51c4ef55ea8f6b448d85f0fac5984]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_862a8.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o /tmp/ccMnyl7a.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_862a8]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_862a8.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o -o cmTC_862a8 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-23ubuntu4' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-uJ7kn6/gcc-13-13.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Ubuntu 13.2.0-23ubuntu4) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_862a8' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_862a8.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVAgbLu.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_862a8 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccVAgbLu.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_862a8] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [CMakeFiles/cmTC_862a8.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "build-support/custom-modules/ns3-compiler-and-linker-support.cmake:53 (check_cxx_source_compiles)"
+      - "build-support/macros-and-definitions.cmake:44 (include)"
+      - "CMakeLists.txt:116 (include)"
+    checks:
+      - "Performing Test GCC_WORKING_PEDANTIC_SEMICOLON"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-9LUpNl"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-9LUpNl"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "GCC_WORKING_PEDANTIC_SEMICOLON"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-9LUpNl'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_129a7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_129a7.dir/build.make CMakeFiles/cmTC_129a7.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-9LUpNl'
+        Building CXX object CMakeFiles/cmTC_129a7.dir/src.cxx.o
+        /usr/bin/c++ -DGCC_WORKING_PEDANTIC_SEMICOLON  -Wall -Wpedantic -Werror -fPIE -o CMakeFiles/cmTC_129a7.dir/src.cxx.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-9LUpNl/src.cxx
+        Linking CXX executable cmTC_129a7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_129a7.dir/link.txt --verbose=1
+        /usr/bin/c++  -Wall -Wpedantic -Werror CMakeFiles/cmTC_129a7.dir/src.cxx.o -o cmTC_129a7 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-9LUpNl'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "build-support/macros-and-definitions.cmake:617 (find_package)"
+      - "CMakeLists.txt:154 (process_options)"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-7YChnH"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-7YChnH"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-7YChnH'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e22ef/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e22ef.dir/build.make CMakeFiles/cmTC_e22ef.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-7YChnH'
+        Building C object CMakeFiles/cmTC_e22ef.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIE -o CMakeFiles/cmTC_e22ef.dir/src.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-7YChnH/src.c
+        Linking C executable cmTC_e22ef
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e22ef.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_e22ef.dir/src.c.o -o cmTC_e22ef 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-7YChnH'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "build-support/macros-and-definitions.cmake:1055 (check_cxx_source_compiles)"
+      - "CMakeLists.txt:154 (process_options)"
+    checks:
+      - "Performing Test HAVE_UINT128_T"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IX7tMm"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IX7tMm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_UINT128_T"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IX7tMm'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a5176/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a5176.dir/build.make CMakeFiles/cmTC_a5176.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IX7tMm'
+        Building CXX object CMakeFiles/cmTC_a5176.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_UINT128_T  -std=c++20 -fPIE -o CMakeFiles/cmTC_a5176.dir/src.cxx.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IX7tMm/src.cxx
+        /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IX7tMm/src.cxx: In function ‘int main()’:
+        /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IX7tMm/src.cxx:4:18: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint8_t’?
+            4 |             if ((uint128_t *) 0) return 0;
+              |                  ^~~~~~~~~
+              |                  uint8_t
+        /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IX7tMm/src.cxx:4:29: error: expected primary-expression before ‘)’ token
+            4 |             if ((uint128_t *) 0) return 0;
+              |                             ^
+        /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IX7tMm/src.cxx:4:30: error: expected ‘)’ before numeric constant
+            4 |             if ((uint128_t *) 0) return 0;
+              |                ~             ^~
+              |                              )
+        /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IX7tMm/src.cxx:5:25: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint8_t’?
+            5 |             if (sizeof (uint128_t)) return 0;
+              |                         ^~~~~~~~~
+              |                         uint8_t
+        gmake[1]: *** [CMakeFiles/cmTC_a5176.dir/build.make:78: CMakeFiles/cmTC_a5176.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IX7tMm'
+        gmake: *** [Makefile:127: cmTC_a5176/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "build-support/macros-and-definitions.cmake:1065 (check_cxx_source_compiles)"
+      - "CMakeLists.txt:154 (process_options)"
+    checks:
+      - "Performing Test HAVE___UINT128_T"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HFwb9U"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HFwb9U"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE___UINT128_T"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HFwb9U'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_21687/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_21687.dir/build.make CMakeFiles/cmTC_21687.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HFwb9U'
+        Building CXX object CMakeFiles/cmTC_21687.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE___UINT128_T  -std=c++20 -fPIE -o CMakeFiles/cmTC_21687.dir/src.cxx.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HFwb9U/src.cxx
+        Linking CXX executable cmTC_21687
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21687.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_21687.dir/src.cxx.o -o cmTC_21687 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-HFwb9U'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "build-support/macros-and-definitions.cmake:1111 (check_include_file)"
+      - "CMakeLists.txt:154 (process_options)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-3jaJ4v"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-3jaJ4v"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-3jaJ4v'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c95ae/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c95ae.dir/build.make CMakeFiles/cmTC_c95ae.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-3jaJ4v'
+        Building C object CMakeFiles/cmTC_c95ae.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_c95ae.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-3jaJ4v/CheckIncludeFile.c
+        Linking C executable cmTC_c95ae
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c95ae.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_c95ae.dir/CheckIncludeFile.c.o -o cmTC_c95ae 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-3jaJ4v'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "build-support/macros-and-definitions.cmake:1112 (check_include_file)"
+      - "CMakeLists.txt:154 (process_options)"
+    checks:
+      - "Looking for inttypes.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-3Hp1X1"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-3Hp1X1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_INTTYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-3Hp1X1'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d93c0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d93c0.dir/build.make CMakeFiles/cmTC_d93c0.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-3Hp1X1'
+        Building C object CMakeFiles/cmTC_d93c0.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_d93c0.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-3Hp1X1/CheckIncludeFile.c
+        Linking C executable cmTC_d93c0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d93c0.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_d93c0.dir/CheckIncludeFile.c.o -o cmTC_d93c0 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-3Hp1X1'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "build-support/macros-and-definitions.cmake:1113 (check_include_file)"
+      - "CMakeLists.txt:154 (process_options)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-hTIMAR"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-hTIMAR"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-hTIMAR'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d6926/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d6926.dir/build.make CMakeFiles/cmTC_d6926.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-hTIMAR'
+        Building C object CMakeFiles/cmTC_d6926.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_d6926.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-hTIMAR/CheckIncludeFile.c
+        Linking C executable cmTC_d6926
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6926.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_d6926.dir/CheckIncludeFile.c.o -o cmTC_d6926 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-hTIMAR'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "build-support/macros-and-definitions.cmake:1114 (check_include_file)"
+      - "CMakeLists.txt:154 (process_options)"
+    checks:
+      - "Looking for sys/stat.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-6ZHbi3"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-6ZHbi3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_SYS_STAT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-6ZHbi3'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ff2c3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ff2c3.dir/build.make CMakeFiles/cmTC_ff2c3.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-6ZHbi3'
+        Building C object CMakeFiles/cmTC_ff2c3.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_ff2c3.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-6ZHbi3/CheckIncludeFile.c
+        Linking C executable cmTC_ff2c3
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff2c3.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_ff2c3.dir/CheckIncludeFile.c.o -o cmTC_ff2c3 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-6ZHbi3'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "build-support/macros-and-definitions.cmake:1115 (check_include_file)"
+      - "CMakeLists.txt:154 (process_options)"
+    checks:
+      - "Looking for dirent.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-enqEQ7"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-enqEQ7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_DIRENT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-enqEQ7'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d1996/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d1996.dir/build.make CMakeFiles/cmTC_d1996.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-enqEQ7'
+        Building C object CMakeFiles/cmTC_d1996.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_d1996.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-enqEQ7/CheckIncludeFile.c
+        Linking C executable cmTC_d1996
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1996.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_d1996.dir/CheckIncludeFile.c.o -o cmTC_d1996 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-enqEQ7'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "build-support/macros-and-definitions.cmake:1116 (check_include_file)"
+      - "CMakeLists.txt:154 (process_options)"
+    checks:
+      - "Looking for stdlib.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-jIg4Os"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-jIg4Os"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_STDLIB_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-jIg4Os'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_66679/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_66679.dir/build.make CMakeFiles/cmTC_66679.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-jIg4Os'
+        Building C object CMakeFiles/cmTC_66679.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_66679.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-jIg4Os/CheckIncludeFile.c
+        Linking C executable cmTC_66679
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66679.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_66679.dir/CheckIncludeFile.c.o -o cmTC_66679 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-jIg4Os'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "build-support/macros-and-definitions.cmake:1117 (check_include_file)"
+      - "CMakeLists.txt:154 (process_options)"
+    checks:
+      - "Looking for signal.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-nsrvp8"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-nsrvp8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_SIGNAL_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-nsrvp8'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f562c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f562c.dir/build.make CMakeFiles/cmTC_f562c.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-nsrvp8'
+        Building C object CMakeFiles/cmTC_f562c.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_f562c.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-nsrvp8/CheckIncludeFile.c
+        Linking C executable cmTC_f562c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f562c.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_f562c.dir/CheckIncludeFile.c.o -o cmTC_f562c 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-nsrvp8'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "build-support/macros-and-definitions.cmake:1118 (check_include_file)"
+      - "CMakeLists.txt:154 (process_options)"
+    checks:
+      - "Looking for netpacket/packet.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-92Ua02"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-92Ua02"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_PACKETH"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-92Ua02'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c3ce8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c3ce8.dir/build.make CMakeFiles/cmTC_c3ce8.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-92Ua02'
+        Building C object CMakeFiles/cmTC_c3ce8.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_c3ce8.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-92Ua02/CheckIncludeFile.c
+        Linking C executable cmTC_c3ce8
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3ce8.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_c3ce8.dir/CheckIncludeFile.c.o -o cmTC_c3ce8 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-92Ua02'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "build-support/macros-and-definitions.cmake:1119 (check_function_exists)"
+      - "CMakeLists.txt:154 (process_options)"
+    checks:
+      - "Looking for getenv"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-AFHMFX"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-AFHMFX"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_GETENV"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-AFHMFX'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bc5aa/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bc5aa.dir/build.make CMakeFiles/cmTC_bc5aa.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-AFHMFX'
+        Building C object CMakeFiles/cmTC_bc5aa.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=getenv -fPIE -o CMakeFiles/cmTC_bc5aa.dir/CheckFunctionExists.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-AFHMFX/CheckFunctionExists.c
+        Linking C executable cmTC_bc5aa
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc5aa.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=getenv CMakeFiles/cmTC_bc5aa.dir/CheckFunctionExists.c.o -o cmTC_bc5aa 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-AFHMFX'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "src/antenna/CMakeLists.txt:2 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test HAVE_STD_BESSEL_FUNC"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-vj9JRN"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-vj9JRN"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_STD_BESSEL_FUNC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-vj9JRN'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1bb81/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1bb81.dir/build.make CMakeFiles/cmTC_1bb81.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-vj9JRN'
+        Building CXX object CMakeFiles/cmTC_1bb81.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_STD_BESSEL_FUNC  -std=c++20 -fPIE -o CMakeFiles/cmTC_1bb81.dir/src.cxx.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-vj9JRN/src.cxx
+        Linking CXX executable cmTC_1bb81
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1bb81.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_1bb81.dir/src.cxx.o -o cmTC_1bb81 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-vj9JRN'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "src/core/CMakeLists.txt:29 (check_include_files)"
+    checks:
+      - "Looking for include files boost/units/quantity.hpp, boost/units/systems/si.hpp"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-2XBzsM"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-2XBzsM"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_BOOST_UNITS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-2XBzsM'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7c645/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7c645.dir/build.make CMakeFiles/cmTC_7c645.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-2XBzsM'
+        Building CXX object CMakeFiles/cmTC_7c645.dir/HAVE_BOOST_UNITS.cpp.o
+        /usr/bin/c++   -std=c++20 -fPIE -o CMakeFiles/cmTC_7c645.dir/HAVE_BOOST_UNITS.cpp.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-2XBzsM/HAVE_BOOST_UNITS.cpp
+        Linking CXX executable cmTC_7c645
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c645.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_7c645.dir/HAVE_BOOST_UNITS.cpp.o -o cmTC_7c645 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-2XBzsM'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "src/fd-net-device/CMakeLists.txt:3 (check_include_file)"
+    checks:
+      - "Looking for net/ethernet.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-pL7oKr"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-pL7oKr"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_NET_ETHERNET_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-pL7oKr'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2c26d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2c26d.dir/build.make CMakeFiles/cmTC_2c26d.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-pL7oKr'
+        Building C object CMakeFiles/cmTC_2c26d.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_2c26d.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-pL7oKr/CheckIncludeFile.c
+        Linking C executable cmTC_2c26d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c26d.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_2c26d.dir/CheckIncludeFile.c.o -o cmTC_2c26d 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-pL7oKr'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "src/fd-net-device/CMakeLists.txt:7 (check_include_file)"
+    checks:
+      - "Looking for netpacket/packet.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-A9WlD7"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-A9WlD7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_PACKET_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-A9WlD7'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c3ff9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c3ff9.dir/build.make CMakeFiles/cmTC_c3ff9.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-A9WlD7'
+        Building C object CMakeFiles/cmTC_c3ff9.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_c3ff9.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-A9WlD7/CheckIncludeFile.c
+        Linking C executable cmTC_c3ff9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3ff9.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_c3ff9.dir/CheckIncludeFile.c.o -o cmTC_c3ff9 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-A9WlD7'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "src/fd-net-device/CMakeLists.txt:11 (check_include_file)"
+    checks:
+      - "Looking for net/if.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-33GV2K"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-33GV2K"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_IF_NETS_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-33GV2K'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_264bd/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_264bd.dir/build.make CMakeFiles/cmTC_264bd.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-33GV2K'
+        Building C object CMakeFiles/cmTC_264bd.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_264bd.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-33GV2K/CheckIncludeFile.c
+        Linking C executable cmTC_264bd
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_264bd.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_264bd.dir/CheckIncludeFile.c.o -o cmTC_264bd 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-33GV2K'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "src/fd-net-device/CMakeLists.txt:15 (check_include_file)"
+    checks:
+      - "Looking for linux/if_tun.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IC81Y5"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IC81Y5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_IF_TUN_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IC81Y5'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3bd79/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3bd79.dir/build.make CMakeFiles/cmTC_3bd79.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IC81Y5'
+        Building C object CMakeFiles/cmTC_3bd79.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_3bd79.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IC81Y5/CheckIncludeFile.c
+        Linking C executable cmTC_3bd79
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3bd79.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_3bd79.dir/CheckIncludeFile.c.o -o cmTC_3bd79 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-IC81Y5'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "src/fd-net-device/CMakeLists.txt:19 (check_include_file)"
+    checks:
+      - "Looking for net/netmap_user.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-fiZ5Rx"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-fiZ5Rx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_NETMAP_USER_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-fiZ5Rx'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c8ac2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c8ac2.dir/build.make CMakeFiles/cmTC_c8ac2.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-fiZ5Rx'
+        Building C object CMakeFiles/cmTC_c8ac2.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_c8ac2.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-fiZ5Rx/CheckIncludeFile.c
+        /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-fiZ5Rx/CheckIncludeFile.c:1:10: fatal error: net/netmap_user.h: No such file or directory
+            1 | #include <net/netmap_user.h>
+              |          ^~~~~~~~~~~~~~~~~~~
+        compilation terminated.
+        gmake[1]: *** [CMakeFiles/cmTC_c8ac2.dir/build.make:78: CMakeFiles/cmTC_c8ac2.dir/CheckIncludeFile.c.o] Error 1
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-fiZ5Rx'
+        gmake: *** [Makefile:127: cmTC_c8ac2/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "src/fd-net-device/CMakeLists.txt:23 (check_include_file)"
+    checks:
+      - "Looking for sys/ioctl.h"
+    directories:
+      source: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-YiU3U5"
+      binary: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-YiU3U5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/custom-modules;/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build-support/3rd-party"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_SYS_IOCTL_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-YiU3U5'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6490d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6490d.dir/build.make CMakeFiles/cmTC_6490d.dir/build
+        gmake[1]: Entering directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-YiU3U5'
+        Building C object CMakeFiles/cmTC_6490d.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_6490d.dir/CheckIncludeFile.c.o -c /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-YiU3U5/CheckIncludeFile.c
+        Linking C executable cmTC_6490d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6490d.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_6490d.dir/CheckIncludeFile.c.o -o cmTC_6490d 
+        gmake[1]: Leaving directory '/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/CMakeFiles/CMakeScratch/TryCompile-YiU3U5'
+        
+      exitCode: 0
+...

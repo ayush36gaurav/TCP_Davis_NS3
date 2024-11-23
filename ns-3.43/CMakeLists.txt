@@ -10,6 +10,12 @@ project(NS3 CXX C)
 
 file(STRINGS VERSION NS3_VER)
 
+# Enable CTest and Testing
+enable_testing()
+
+# Optional: Add tests to CTest
+add_subdirectory(test)
+
 # minimum compiler versions
 set(AppleClang_MinVersion 13.1.6)
 set(Clang_MinVersion 11.0.0)

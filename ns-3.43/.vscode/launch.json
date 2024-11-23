@@ -29,7 +29,7 @@
                 }
             ]
         },
-        {
+        {{workspaceFol
             "name": "(lldb) Launch from scratch",
             "type": "cppdbg",
             "request": "launch",
