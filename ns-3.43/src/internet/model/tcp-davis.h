@@ -43,6 +43,7 @@ namespace ns3
 
             std::string GetName() const override;
             bool HasCongControl() const override;
+            uint32_t GetSsThresh(Ptr<const TcpSocketState> tcb, uint32_t bytesInFlight) override;
 
             Ptr<TcpCongestionOps> Fork() override;
 

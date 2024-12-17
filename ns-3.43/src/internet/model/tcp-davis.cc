@@ -55,6 +55,10 @@ namespace ns3
                               TimeValue(Seconds(10)),
                               MakeTimeAccessor(&TcpDavis::m_rttTimeout),
                               MakeTimeChecker());
+                // .AddTraceSource("Rtt",
+                //                 "RTT value of the connection",
+                //                 MakeTraceSourceAccessor(&TcpDavis::m_minRTT),
+                //                 "ns3::TracedValueCallback::Time");
         return tid;
     }
 
@@ -92,6 +96,13 @@ namespace ns3
     {
         NS_LOG_FUNCTION(this);
         return true;
+    }
+
+    uint32_t
+    TcpDavis::GetSsThresh(Ptr<const TcpSocketState> tcb, uint32_t bytesInFlight)
+    {
+        NS_LOG_FUNCTION(this << tcb << bytesInFlight);
+        return tcb->m_ssThresh;
     }
 
     void TcpDavis::PktsAcked(Ptr<TcpSocketState> tcb, uint32_t segmentsAcked, const Time& rtt)
@@ -184,7 +195,9 @@ namespace ns3
                     }
                 }
 
-                if(m_bdp <= m_lastBdp || tcb->m_congState == TcpSocketState::CA_LOSS || tcb->m_congState == TcpSocketState::ECN_CE_RCVD) // Check if the condition used is correct
+                // Disabled for a moment
+                // if(m_bdp <= m_lastBdp || tcb->m_congState == TcpSocketState::CA_LOSS || tcb->m_congState == TcpSocketState::ECN_CE_RCVD) // Check if the condition used is correct
+                if(m_bdp <= m_lastBdp)
                 {
                     ExitSlowStart();
                 }
@@ -193,6 +206,9 @@ namespace ns3
                     tcb->m_cWnd = m_bdp + m_gainCwnd;
                     EnterGain1();
                 }
+                break;
+            case DAVIS_DRAIN:
+                NS_LOG_WARN("Slow Start entered DRAIN mode");
                 break;
         }
     }

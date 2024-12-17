@@ -87,6 +87,7 @@
     #include <ns3/tcp-bic.h>
     #include <ns3/tcp-congestion-ops.h>
     #include <ns3/tcp-cubic.h>
+    #include <ns3/tcp-davis.h>
     #include <ns3/tcp-dctcp.h>
     #include <ns3/tcp-header.h>
     #include <ns3/tcp-highspeed.h>
