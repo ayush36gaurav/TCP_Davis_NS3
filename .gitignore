@@ -1,3 +1,5 @@
 build/
 ns-3.43/build/
 ns3 Analysis/myenv/
+ns-3.43/cmake-cache/**/*.o
+*.code-workspace
