@@ -59,9 +59,9 @@ int main(int argc, char *argv[])
 
     // Enable logging
     // LogComponentEnable("TcpDavisSimulation", LOG_LEVEL_INFO);
-    LogComponentEnable("PacketSink", LOG_LEVEL_ALL);          
+    // LogComponentEnable("PacketSink", LOG_LEVEL_ALL);          
     // LogComponentEnable("TcpL4Protocol", LOG_LEVEL_ALL);    
-    // LogComponentEnable("TcpSocketBase", LOG_LEVEL_ALL);
+    LogComponentEnable("TcpSocketBase", LOG_LEVEL_ALL);
     
     NS_LOG_INFO("Creating nodes...");
     NodeContainer senders, router, receiver;
@@ -72,11 +72,11 @@ int main(int argc, char *argv[])
     NS_LOG_INFO("Setting up links...");
     PointToPointHelper senderToRouterLink0, senderToRouterLink1, routerToReceiverLink;
     senderToRouterLink0.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
-    senderToRouterLink0.SetChannelAttribute("Delay", StringValue("30ms"));
+    senderToRouterLink0.SetChannelAttribute("Delay", StringValue("10ms"));
     senderToRouterLink1.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
-    senderToRouterLink1.SetChannelAttribute("Delay", StringValue("60ms"));
-    routerToReceiverLink.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
-    routerToReceiverLink.SetChannelAttribute("Delay", StringValue("10ms"));
+    senderToRouterLink1.SetChannelAttribute("Delay", StringValue("25ms"));
+    routerToReceiverLink.SetDeviceAttribute("DataRate", StringValue("5Mbps"));
+    routerToReceiverLink.SetChannelAttribute("Delay", StringValue("5ms"));
 
     NS_LOG_INFO("Installing the links...");
     NetDeviceContainer devices0 = senderToRouterLink0.Install(senders.Get(0), router.Get(0));

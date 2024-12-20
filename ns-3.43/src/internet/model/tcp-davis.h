@@ -12,6 +12,8 @@
 
 #include "tcp-congestion-ops.h"
 #include "tcp-socket-state.h"
+#include "tcp-rate-ops.h"
+#include "ns3/traced-value.h"
 #include "ns3/nstime.h"
 #include <limits>
 
@@ -43,24 +45,31 @@ namespace ns3
 
             std::string GetName() const override;
             bool HasCongControl() const override;
+            void Init(Ptr<TcpSocketState> tcb [[maybe_unused]]) override;
             uint32_t GetSsThresh(Ptr<const TcpSocketState> tcb, uint32_t bytesInFlight) override;
-
+            void CongControl(Ptr<TcpSocketState> tcb,
+                     const TcpRateOps::TcpRateConnection& rc,
+                     const TcpRateOps::TcpRateSample& rs) override;
+            void CongestionStateSet(Ptr<TcpSocketState> tcb,
+                                    const TcpSocketState::TcpCongState_t newState) override;
+            void CwndEvent(Ptr<TcpSocketState> tcb, const TcpSocketState::TcpCAEvent_t event) override;
+            
             Ptr<TcpCongestionOps> Fork() override;
 
         protected:
             // Make the test class as friend
             friend class TcpDavisCheckGainValuesTest;
 
-            void SlowStart(Ptr<TcpSocketState> tcb);
-            void CongestionAvoidance(Ptr<TcpSocketState> tcb);
-
+            void SlowStart(Ptr<TcpSocketState> tcb,
+                            const TcpRateOps::TcpRateConnection& rc,
+                            const TcpRateOps::TcpRateSample& rs);
+            void CongestionAvoidance(Ptr<TcpSocketState> tcb,
+                                    const TcpRateOps::TcpRateConnection& rc,
+                                    const TcpRateOps::TcpRateSample& rs);
             void EnterDrain();
             void EnterGain1();
             void EnterGain2(); 
             void ExitSlowStart();
-            void EnterSlowStart(Ptr<TcpSocketState> tcb);
-
-            uint32_t CalculateGainCwnd(uint32_t currentBdp, uint32_t lastBdp);  
 
         private:
             //  Static varaibles in the Linux module
@@ -89,13 +98,8 @@ namespace ns3
 
             // Control variables
             const uint32_t TCP_INFINITE_SSTHRESH = std::numeric_limits<uint32_t>::max();
-            bool m_isInitializationDone{false};
             bool m_isInSlowStart{true};
 
-            uint32_t m_packetsDelivered{0};
-
-            virtual void PktsAcked(Ptr<TcpSocketState> tcb, uint32_t segmentsAcked, const Time& rtt) override;
-            Time m_deliveredMStamp{Seconds(0)};
             uint32_t m_delivered{0}; // Number of packets delivered and it is used to find BDP using the interval
             Time m_interval{Seconds(0)};
     };
