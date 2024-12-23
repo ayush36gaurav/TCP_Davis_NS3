@@ -4,176 +4,216 @@
 #include "ns3/point-to-point-module.h"
 #include "ns3/applications-module.h"
 #include "ns3/flow-monitor-module.h"
+#include "ns3/tcp-davis.h"
 #include <fstream>
-#include <map>
-
+#include "ns3/queue-disc.h"
+#include "ns3/traffic-control-helper.h"
 using namespace ns3;
 
-NS_LOG_COMPONENT_DEFINE("TcpCubicSimulation");
+NS_LOG_COMPONENT_DEFINE("TcpDavisSimulation");
+std::ofstream throughputLog("throughput-log.txt");
+std::ofstream rttLog("rtt-log.txt");
 
-std::ofstream rttFile("rtt-log.txt");
-std::ofstream throughputFile("throughput-log.txt");
-
-// void RttTracer(Ptr<OutputStreamWrapper> stream, uint32_t flowId, Time newRtt)
-// {
-//     *stream->GetStream() << Simulator::Now().GetSeconds() << "\tFlow " << flowId 
-//                          << "\t" << newRtt.GetMilliSeconds() << " ms" << std::endl;
-// }
-
-void RttTracerWithFlowId(uint32_t flowId, Time oldRtt, Time newRtt)
+void CalculateRtt(Ptr<FlowMonitor> flowMonitor, FlowMonitorHelper &flowHelper, double interval, double &time, Ipv4InterfaceContainer &interfaces1, Ipv4InterfaceContainer &interfaces2, NetDeviceContainer &btlneck_device)
 {
-    rttFile << Simulator::Now().GetSeconds()
-            << "\tFlow " << flowId
-            << "\tOld RTT: " << oldRtt.GetMilliSeconds() << " ms"
-            << "\tNew RTT: " << newRtt.GetMilliSeconds() << " ms" << std::endl;
+    flowMonitor->CheckForLostPackets();
+    std::map<FlowId, FlowMonitor::FlowStats> stats = flowMonitor->GetFlowStats();
+    Ptr<Ipv4FlowClassifier> classifier = DynamicCast<Ipv4FlowClassifier>(flowHelper.GetClassifier());
+
+    // Add a check for null for stats
+    if(!stats.empty())
+    {
+        for(auto it = stats.begin(); it!=stats.end(); ++it)
+        {
+            FlowId flowId = it->first;
+            FlowMonitor::FlowStats flowStats = it->second;
+            Ipv4FlowClassifier::FiveTuple t = classifier->FindFlow(flowId);
+
+            int flg = 0;
+            double propagationDelay = 0.0;
+            if(t.sourceAddress == interfaces1.GetAddress(0))
+            {
+                propagationDelay = 30;
+                flg = 1;
+            }
+            else if(t.sourceAddress == interfaces2.GetAddress(0))
+            {
+                propagationDelay = 60;
+                flg = 1;
+            }
+
+            if(flg==1)
+            {
+                double queueingDelay = 0.0;
+                Ptr<QueueDisc> queue0 = DynamicCast<QueueDisc>(btlneck_device.Get(0)->GetObject<QueueDisc>());
+                if(queue0)
+                {
+                    uint32_t queueSize0 = queue0->GetCurrentSize().GetValue();
+                    double serviceRate0 = 10 * 1e6;
+                    queueingDelay += queueSize0 * 8.0 / serviceRate0;
+                }
+
+                Ptr<QueueDisc> queue1 = DynamicCast<QueueDisc>(btlneck_device.Get(1)->GetObject<QueueDisc>());
+                if(queue1)
+                {
+                    uint32_t queueSize1 = queue1->GetCurrentSize().GetValue();
+                    double serviceRate1 = 10 * 1e6;
+                    queueingDelay += queueSize1 * 8.0 / serviceRate1;
+                }
+
+                double rtt = propagationDelay + queueingDelay;
+                rttLog << static_cast<int>(time) << " " << flowId - 1 << " " << rtt << "\n";
+            }
+        }
+    }
+    time += interval;
+    Simulator::Schedule(Seconds(interval), &CalculateRtt, flowMonitor, std::ref(flowHelper), interval, std::ref(time), std::ref(interfaces1), std::ref(interfaces2), std::ref(btlneck_device));
 }
 
-void ThroughputTracer(Ptr<PacketSink> sink, uint32_t flowId)
+void CalculateThroughput(Ptr<FlowMonitor> flowMonitor, FlowMonitorHelper &flowHelper, double interval, double &time)
 {
-    static std::map<uint32_t, uint64_t> previousRx;
+    flowMonitor->CheckForLostPackets();
+    std::map<FlowId, FlowMonitor::FlowStats> stats = flowMonitor->GetFlowStats();
+    Ptr<Ipv4FlowClassifier> classifier = DynamicCast<Ipv4FlowClassifier>(flowHelper.GetClassifier());
 
-    uint64_t totalRx = sink->GetTotalRx();
-    double throughput = (totalRx - previousRx[flowId]) * 8.0 / 1e6; // Mbps
-    previousRx[flowId] = totalRx;
-
-    if (throughputFile.is_open())
+    for(auto it = stats.begin(); it!=stats.end(); ++it)
     {
-        throughputFile << Simulator::Now().GetSeconds() << " " << flowId << " " << throughput << std::endl;
+        FlowId flowId = it->first;
+        FlowMonitor::FlowStats flowStats = it->second;
+        // Ipv4FlowClassifier::FiveTuple t = classifier->FindFlow(flowId);
+
+        double throughput = 0.0;
+        // std::cout<< flowStats.timeLastRxPacket.GetSeconds() << " " << time << std::endl;
+        // if (flowStats.timeLastRxPacket.GetSeconds() > time)
+        // {
+            throughput = (flowStats.rxBytes * 8.0) /
+                         (flowStats.timeLastRxPacket.GetSeconds() - flowStats.timeFirstTxPacket.GetSeconds()) /
+                         1e6;
+        // }
+
+        throughputLog << static_cast<int>(time) << " " << flowId - 1 << " " << throughput << "\n";
     }
 
-    Simulator::Schedule(Seconds(1.0), &ThroughputTracer, sink, flowId);
+    time += interval;
+    Simulator::Schedule(Seconds(interval), &CalculateThroughput, flowMonitor, std::ref(flowHelper), interval, std::ref(time));
 }
 
-void SendData(Ptr<Socket> socket, uint32_t packetSize, uint32_t maxBytes, uint32_t bytesSent)
-{
-    if (maxBytes == 0 || bytesSent < maxBytes)
-    {
-        socket->Send(Create<Packet>(packetSize));
-        bytesSent += packetSize;
-
-        Simulator::Schedule(MilliSeconds(1), &SendData, socket, packetSize, maxBytes, bytesSent);
-    }
-}
 
 int main(int argc, char *argv[])
 {
-    // Set TCP-Cubic as the TCP variant
-    Config::SetDefault("ns3::TcpL4Protocol::SocketType", TypeIdValue(TcpCubic::GetTypeId()));
-
     CommandLine cmd;
     cmd.Parse(argc, argv);
 
-    LogComponentEnable("TcpCubicSimulation", LOG_LEVEL_INFO);
+    // Logging
+    // LogComponentEnable("TcpDavis", LOG_LEVEL_INFO);
+    LogComponentEnable("TcpDavisSimulation", LOG_LEVEL_INFO);
+    // LogComponentEnable("PacketSink", LOG_LEVEL_ALL);          
+    // LogComponentEnable("TcpL4Protocol", LOG_LEVEL_ALL);    
+    // LogComponentEnable("TcpSocketBase", LOG_LEVEL_ALL);
 
     NS_LOG_INFO("Creating nodes...");
-    NodeContainer senders, router, receiver;
+    NodeContainer senders, routers, receivers;
     senders.Create(2);
-    router.Create(1);
-    receiver.Create(1);
+    routers.Create(2);
+    receivers.Create(2);
 
     NS_LOG_INFO("Setting up links...");
-    PointToPointHelper senderToRouterLink0, senderToRouterLink1, routerToReceiverLink;
-    senderToRouterLink0.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
-    senderToRouterLink0.SetChannelAttribute("Delay", StringValue("30ms"));
-    senderToRouterLink1.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
-    senderToRouterLink1.SetChannelAttribute("Delay", StringValue("60ms"));
-    routerToReceiverLink.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
-    routerToReceiverLink.SetChannelAttribute("Delay", StringValue("10ms"));
+    PointToPointHelper link1, link2, btlneck_link, link3, link4;
+    link1.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
+    link1.SetChannelAttribute("Delay", StringValue("10ms"));
+    link2.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
+    link2.SetChannelAttribute("Delay", StringValue("25ms"));
+    link3.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
+    link3.SetChannelAttribute("Delay", StringValue("10ms"));
+    link4.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
+    link4.SetChannelAttribute("Delay", StringValue("25ms"));
+    btlneck_link.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
+    btlneck_link.SetChannelAttribute("Delay", StringValue("10ms"));
 
     NS_LOG_INFO("Installing the links...");
-    NetDeviceContainer devices0 = senderToRouterLink0.Install(senders.Get(0), router.Get(0));
-    NetDeviceContainer devices1 = senderToRouterLink1.Install(senders.Get(1), router.Get(0));
-    NetDeviceContainer bottleneckDevices = routerToReceiverLink.Install(router.Get(0), receiver.Get(0));
+    NetDeviceContainer device1 = link1.Install(senders.Get(0), routers.Get(0));
+    NetDeviceContainer device2 = link2.Install(senders.Get(1), routers.Get(0));
+    NetDeviceContainer device3 = link3.Install(routers.Get(1), receivers.Get(0));
+    NetDeviceContainer device4 = link4.Install(routers.Get(1), receivers.Get(1));
+    NetDeviceContainer btlneck_device = btlneck_link.Install(routers.Get(0), routers.Get(1));
 
     NS_LOG_INFO("Installing Internet stack...");
     InternetStackHelper stack;
     stack.Install(senders);
-    stack.Install(router);
-    stack.Install(receiver);
+    stack.Install(routers);
+    stack.Install(receivers);
 
     NS_LOG_INFO("Assigning IP addresses...");
     Ipv4AddressHelper ipv4;
     ipv4.SetBase("10.1.1.0", "255.255.255.0");
-    Ipv4InterfaceContainer interfaces0 = ipv4.Assign(devices0);
+    Ipv4InterfaceContainer interfaces1 = ipv4.Assign(device1);
     ipv4.SetBase("10.1.2.0", "255.255.255.0");
-    Ipv4InterfaceContainer interfaces1 = ipv4.Assign(devices1);
+    Ipv4InterfaceContainer interfaces2 = ipv4.Assign(device2);
     ipv4.SetBase("10.1.3.0", "255.255.255.0");
-    Ipv4InterfaceContainer bottleneckInterfaces = ipv4.Assign(bottleneckDevices);
-
-    // Print the IP address of the receiver for debugging
-    std::cout << "Receiver IP: " << bottleneckInterfaces.GetAddress(1) << std::endl;
+    Ipv4InterfaceContainer btlneck_interface = ipv4.Assign(btlneck_device);
+    ipv4.SetBase("10.1.4.0", "255.255.255.0");
+    Ipv4InterfaceContainer interfaces3 = ipv4.Assign(device3);
+    ipv4.SetBase("10.1.5.0", "255.255.255.0");
+    Ipv4InterfaceContainer interfaces4 = ipv4.Assign(device4);
 
     Ipv4GlobalRoutingHelper::PopulateRoutingTables();
 
+    // Set TCP-DAVIS as the socket type
+    Config::SetDefault("ns3::TcpL4Protocol::SocketType", TypeIdValue(TcpDavis::GetTypeId()));
+
+    NS_LOG_INFO("Creating applications...");
     uint16_t port0 = 8080;
-    Address sinkAddress0(InetSocketAddress(bottleneckInterfaces.GetAddress(1), port0));
+    uint16_t port1 = 9090;
+
+    // Flow0
+    Address sinkAddress0(InetSocketAddress(interfaces3.GetAddress(1), port0));
     PacketSinkHelper sinkHelper0("ns3::TcpSocketFactory", sinkAddress0);
-    ApplicationContainer sinkApp0 = sinkHelper0.Install(receiver.Get(0));
+    ApplicationContainer sinkApp0 = sinkHelper0.Install(receivers.Get(0));
     sinkApp0.Start(Seconds(0.0));
     sinkApp0.Stop(Seconds(60.0));
 
-    uint16_t port1 = 8081;
-    Address sinkAddress1(InetSocketAddress(bottleneckInterfaces.GetAddress(1), port1));
+    BulkSendHelper sourceHelper0("ns3::TcpSocketFactory", sinkAddress0);
+    sourceHelper0.SetAttribute("MaxBytes", UintegerValue(0));
+    ApplicationContainer sourceApp0 = sourceHelper0.Install(senders.Get(0));
+    sourceApp0.Start(Seconds(1.0));
+    sourceApp0.Stop(Seconds(60.0));
+
+    // Flow1
+    Address sinkAddress1(InetSocketAddress(interfaces4.GetAddress(1), port1));
     PacketSinkHelper sinkHelper1("ns3::TcpSocketFactory", sinkAddress1);
-    ApplicationContainer sinkApp1 = sinkHelper1.Install(receiver.Get(0));
+    ApplicationContainer sinkApp1 = sinkHelper1.Install(receivers.Get(1));
     sinkApp1.Start(Seconds(0.0));
     sinkApp1.Stop(Seconds(60.0));
 
-    Ptr<Socket> socket0 = Socket::CreateSocket(senders.Get(0), TcpSocketFactory::GetTypeId());
-    if (!socket0) 
-    {
-        std::cerr << "Failed to create socket0!" << std::endl;
-        return 1;
-    }
-    std::cout << "Hello 1" << std::endl;
-    Simulator::Schedule(Seconds(0.1), &Socket::Connect, socket0, InetSocketAddress(bottleneckInterfaces.GetAddress(1), port0));
-    std::cout << "Hello 2" << std::endl;
+    BulkSendHelper sourceHelper1("ns3::TcpSocketFactory", sinkAddress1);
+    sourceHelper1.SetAttribute("MaxBytes", UintegerValue(0));
+    ApplicationContainer sourceApp1 = sourceHelper1.Install(senders.Get(1));
+    sourceApp1.Start(Seconds(10.0));
+    sourceApp1.Stop(Seconds(60.0));
 
-    Ptr<Socket> socket1 = Socket::CreateSocket(senders.Get(1), TcpSocketFactory::GetTypeId());
-    if (!socket1) 
-    {
-        std::cerr << "Failed to create socket1!" << std::endl;
-        return 1;
-    }
-    std::cout << "Hello 1" << std::endl;
-    Simulator::Schedule(Seconds(0.1), &Socket::Connect, socket1, InetSocketAddress(bottleneckInterfaces.GetAddress(1), port1));
-    std::cout << "Hello 2" << std::endl;
-    // socket1->Connect(InetSocketAddress(bottleneckInterfaces.GetAddress(1), 8081));
+    TrafficControlHelper tch;
+    tch.SetRootQueueDisc("ns3::FifoQueueDisc");
+    tch.Install(btlneck_device.Get(0));
+    tch.Install(btlneck_device.Get(1));
 
-    AsciiTraceHelper ascii;
-    Ptr<OutputStreamWrapper> rttStream = ascii.CreateFileStream("rtt-log.txt");
-    socket0->TraceConnectWithoutContext("LastRTT", MakeBoundCallback(&RttTracerWithFlowId, 0));
-    socket1->TraceConnectWithoutContext("LastRTT", MakeBoundCallback(&RttTracerWithFlowId, 1));
+    // Install FlowMonitor
+    FlowMonitorHelper flowHelper;
+    Ptr<FlowMonitor> FlowMonitor = flowHelper.InstallAll();
 
-    // socket0->TraceConnectWithoutContext("LastRTT", MakeBoundCallback(&RttTracer, rttStream, 0));
-    // socket1->TraceConnectWithoutContext("LastRTT", MakeBoundCallback(&RttTracer, rttStream, 1));
+    NS_LOG_INFO("Starting simulation...");
+    double rttTime = 1.0;
+    Simulator::Schedule(Seconds(rttTime), &CalculateRtt, FlowMonitor, std::ref(flowHelper), 1.0, std::ref(rttTime), std::ref(interfaces1), std::ref(interfaces2), std::ref(btlneck_device));
 
-    Simulator::Schedule(Seconds(1.0), &SendData, socket0, 1024, 0, 0);
-    Simulator::Schedule(Seconds(11.0), &SendData, socket1, 1024, 0, 0);
-
-    // Enable throughput tracing
-    Simulator::Schedule(Seconds(1.0), &ThroughputTracer, DynamicCast<PacketSink>(sinkApp0.Get(0)), 0);
-    Simulator::Schedule(Seconds(1.0), &ThroughputTracer, DynamicCast<PacketSink>(sinkApp1.Get(0)), 1);
-
-    FlowMonitorHelper flowMonitor;
-    Ptr<FlowMonitor> monitor = flowMonitor.InstallAll();
+    double time = 1.0;
+    Simulator::Schedule(Seconds(time), &CalculateThroughput, FlowMonitor, std::ref(flowHelper), 1.0, std::ref(time));
 
     Simulator::Stop(Seconds(60.0));
     Simulator::Run();
 
-    monitor->CheckForLostPackets();
-    monitor->SerializeToXmlFile("cubic-simulation.xml", true, true);
-
-    Ptr<PacketSink> sink0 = DynamicCast<PacketSink>(sinkApp0.Get(0));
-    std::cout << "Flow 0 Throughput: " << (sink0->GetTotalRx() * 8.0) / (60.0 * 1e6) << " Mbps" << std::endl;
-
-    Ptr<PacketSink> sink1 = DynamicCast<PacketSink>(sinkApp1.Get(0));
-    std::cout << "Flow 1 Throughput: " << (sink1->GetTotalRx() * 8.0) / (60.0 * 1e6) << " Mbps" << std::endl;
+    throughputLog.close();
+    rttLog.close();
 
     Simulator::Destroy();
-
-    rttFile.close();
-    throughputFile.close();
-
+    NS_LOG_INFO("Simulation complete!");
     return 0;
 }

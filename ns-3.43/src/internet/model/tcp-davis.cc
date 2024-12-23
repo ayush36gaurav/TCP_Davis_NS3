@@ -30,11 +30,11 @@ namespace ns3
                               UintegerValue(4),
                               MakeUintegerAccessor(&TcpDavis::m_minCwnd),
                               MakeUintegerChecker<uint8_t>())
-                .AddAttribute("MinGainCwnd",
-                              "Minimum gain in congestion window",
-                              UintegerValue(4),
-                              MakeUintegerAccessor(&TcpDavis::m_minGainCwnd),
-                              MakeUintegerChecker<uint8_t>())
+                // .AddAttribute("MinGainCwnd",
+                //               "Minimum gain in congestion window",
+                //               UintegerValue(4),
+                //               MakeUintegerAccessor(&TcpDavis::m_minGainCwnd),
+                //               MakeUintegerChecker<uint8_t>())
                 .AddAttribute("DrainRtts",
                               "Duration since mode change after which DRAIN mode actually begins",
                               UintegerValue(2),
@@ -61,14 +61,14 @@ namespace ns3
     TcpDavis::TcpDavis() : TcpCongestionOps()
     {
         NS_LOG_FUNCTION(this);
-        m_mode = DAVIS_GAIN1;
-        m_lastModeChange = Simulator::Now();
+        // m_mode = DAVIS_GAIN1;
+        // m_lastModeChange = Simulator::Now();
 
-        m_bdp = m_minCwnd;
-        m_lastBdp = 0;
-        m_gainCwnd = m_minGainCwnd;
+        // m_bdp = m_minCwnd;
+        // m_lastBdp = 0;
+        // m_gainCwnd = m_minGainCwnd;
 
-        m_lastRTT = Seconds(0); 
+        // m_lastRTT = Seconds(0); 
         m_minRTT = Time::Max();
 
         m_minRttTime = Simulator::Now();
@@ -76,11 +76,23 @@ namespace ns3
 
     TcpDavis::TcpDavis(const TcpDavis& sock) : TcpCongestionOps(sock),
                                                 m_minCwnd(sock.m_minCwnd),
-                                                m_minGainCwnd(sock.m_minGainCwnd),
                                                 m_drainRtts(sock.m_drainRtts),
                                                 m_gainOneRtts(sock.m_gainOneRtts),
                                                 m_gainTwoRtts(sock.m_gainTwoRtts),
-                                                m_rttTimeout(sock.m_rttTimeout)
+                                                m_rttTimeout(sock.m_rttTimeout),
+                                                m_mode(sock.m_mode),
+                                                m_lastModeChange(sock.m_lastModeChange),
+                                                m_minRttTime(sock.m_minRttTime),
+                                                m_deliveredStartTime(sock.m_deliveredStartTime),
+                                                m_deliveredStart(sock.m_deliveredStart),
+                                                m_bdp(sock.m_bdp),
+                                                m_lastBdp(sock.m_lastBdp),
+                                                m_gainCwnd(sock.m_gainCwnd),
+                                                m_minRTT(sock.m_minRTT),
+                                                m_isInSlowStart(sock.m_isInSlowStart),
+                                                m_delivered(sock.m_delivered),
+                                                m_interval(sock.m_interval)
+
     {
         NS_LOG_FUNCTION(this);
     }
@@ -108,19 +120,22 @@ namespace ns3
     TcpDavis::Init(Ptr<TcpSocketState> tcb [[maybe_unused]])
     {
         NS_LOG_FUNCTION(this << tcb);
-        tcb->m_cWnd = m_minCwnd;
-        tcb->m_ssThresh = TCP_INFINITE_SSTHRESH;
+        tcb->m_cWnd.Set(m_minCwnd);
+        tcb->m_ssThresh.Set(TCP_INFINITE_SSTHRESH);
         
         tcb->m_pacing = false;
 
-        tcb->m_useEcn = TcpSocketState::On;
+        tcb->m_useEcn = TcpSocketState::UseEcn_t::On;
+        tcb->m_ecnState.Set(TcpSocketState::EcnState_t::ECN_IDLE); 
+
+        tcb->m_lastRtt.Set(Seconds(0));
     }
 
     uint32_t
     TcpDavis::GetSsThresh(Ptr<const TcpSocketState> tcb, uint32_t bytesInFlight)
     {
         NS_LOG_FUNCTION(this << tcb << bytesInFlight);
-        return tcb->m_ssThresh;
+        return tcb->m_ssThresh.Get();
     }
 
     void 
@@ -130,16 +145,16 @@ namespace ns3
     {
         NS_LOG_FUNCTION(this << tcb << rs);
 
-        if(tcb->m_ecnState == TcpSocketState::ECN_CE_RCVD || tcb->m_congState == TcpSocketState::CA_RECOVERY)
+        if(tcb->m_ecnState.Get() == TcpSocketState::ECN_CE_RCVD || tcb->m_congState.Get() == TcpSocketState::CA_RECOVERY)
         {
-            tcb->m_ssThresh = 0;
+            tcb->m_ssThresh.Set(0);
         }
         if(rs.m_bytesLoss!=0)
         {
-            tcb->m_ssThresh = 0;
+            tcb->m_ssThresh.Set(0);
         }
 
-        if(tcb->m_cWnd < tcb->m_ssThresh)
+        if(tcb->m_cWnd.Get() < tcb->m_ssThresh.Get())
         {
             SlowStart(tcb, rc, rs);
         }
@@ -154,13 +169,13 @@ namespace ns3
                                  const TcpSocketState::TcpCongState_t newState)
     {
         NS_LOG_FUNCTION(this << tcb << newState);
-        if(newState == TcpSocketState::CA_LOSS)
+        if(newState == TcpSocketState::TcpCongState_t::CA_LOSS)
         {
-            tcb->m_ssThresh = TCP_INFINITE_SSTHRESH;
+            tcb->m_ssThresh.Set(TCP_INFINITE_SSTHRESH);
         }
-        else if(newState == TcpSocketState::CA_RECOVERY || newState == TcpSocketState::CA_CWR)
+        else if(newState == TcpSocketState::TcpCongState_t::CA_RECOVERY || newState == TcpSocketState::TcpCongState_t::CA_CWR)
         {
-            tcb->m_ssThresh = 0;
+            tcb->m_ssThresh.Set(0);
         }
     }
 
@@ -168,13 +183,13 @@ namespace ns3
     TcpDavis::CwndEvent(Ptr<TcpSocketState> tcb, const TcpSocketState::TcpCAEvent_t event)
     {
         NS_LOG_FUNCTION(this << tcb << event);
-        if(event == TcpSocketState::CA_EVENT_LOSS)
+        if(event == TcpSocketState::TcpCAEvent_t::CA_EVENT_LOSS)
         {
-            tcb->m_ssThresh = TCP_INFINITE_SSTHRESH;
+            tcb->m_ssThresh.Set(TCP_INFINITE_SSTHRESH);
         }
-        else if(event == TcpSocketState::CA_EVENT_ECN_IS_CE)
+        else if(event == TcpSocketState::TcpCAEvent_t::CA_EVENT_ECN_IS_CE)
         {
-            tcb->m_ssThresh = 0;
+            tcb->m_ssThresh.Set(0);
         }
     }
 
@@ -190,12 +205,13 @@ namespace ns3
             m_mode = DAVIS_GAIN1;
             m_lastModeChange = Simulator::Now();
 
-            m_bdp = m_minCwnd;
-            m_lastBdp = 0;
+            // m_bdp = m_minCwnd;
+            // m_lastBdp = 0;
 
-            tcb->m_cWnd = m_minCwnd;
+            tcb->m_cWnd.Set(m_minCwnd);
+            m_minRTT = tcb->m_lastRtt.Get();
 
-            m_minRTT = m_lastRTT; // I doubt the correctness of this line because just before last RTT is set to 0, so I doubt if this is correct but as per module this should be.
+            // m_minRTT = m_lastRTT; // I doubt the correctness of this line because just before last RTT is set to 0, so I doubt if this is correct but as per module this should be.
         }
 
         if(tcb->m_lastRtt.Get().GetSeconds() < m_minRTT.GetSeconds())
@@ -223,20 +239,20 @@ namespace ns3
                     if(m_interval.GetSeconds() > 0)
                     {
                         m_lastBdp = m_bdp;
-                        uint32_t deliveryRate = m_delivered / m_interval.GetSeconds();
+                        uint64_t deliveryRate = m_delivered / m_interval.GetSeconds();
                         m_bdp = deliveryRate * m_minRTT.GetSeconds(); // Check which minRTT variable to use
                         m_gainCwnd = std::max(4U, m_bdp/2);
-                    }
 
-                    if(m_bdp <= m_lastBdp)
-                    {
-                        tcb->m_ssThresh = 0;
-                        ExitSlowStart();
-                    }
-                    else
-                    {
-                        tcb->m_cWnd = m_bdp + m_gainCwnd;
-                        EnterGain1();
+                        if(m_bdp <= m_lastBdp)
+                        {
+                            tcb->m_ssThresh.Set(0);
+                            ExitSlowStart();
+                        }
+                        else
+                        {
+                            tcb->m_cWnd.Set(m_bdp + m_gainCwnd);
+                            EnterGain1();
+                        }
                     }
                 }
                 break;
@@ -297,7 +313,7 @@ namespace ns3
             case DAVIS_DRAIN:
                 if(timeSinceLastModeChange > tcb->m_lastRtt.Get() * m_drainRtts) // Check whether m_minRTT is appropriate to use here
                 {
-                    tcb->m_cWnd = m_bdp + m_gainCwnd;
+                    tcb->m_cWnd.Set(m_bdp + m_gainCwnd);
                     EnterGain1();
                 }
                 break;
@@ -326,15 +342,16 @@ namespace ns3
                         m_gainCwnd = 4 + std::min(2 * deviation, m_bdp);
                     }
 
-                    if(Simulator::Now() - m_minRTT > m_rttTimeout)
+                    if(Simulator::Now() - m_minRttTime > m_rttTimeout)
                     {
-                        tcb->m_cWnd = 4;
-                        m_minRTT = tcb->m_lastRtt;
+                        tcb->m_cWnd.Set(4);
+                        m_minRTT = tcb->m_lastRtt.Get();
+                        m_minRttTime = Simulator::Now();
                         EnterDrain();
                     }
                     else
                     {
-                        tcb->m_cWnd = m_bdp + m_gainCwnd;
+                        tcb->m_cWnd.Set(m_bdp + m_gainCwnd);
                         EnterGain1();
                     }
                 }

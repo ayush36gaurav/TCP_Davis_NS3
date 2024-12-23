@@ -59,9 +59,9 @@ int main(int argc, char *argv[])
 
     // Enable logging
     // LogComponentEnable("TcpDavisSimulation", LOG_LEVEL_INFO);
-    // LogComponentEnable("PacketSink", LOG_LEVEL_ALL);          
+    LogComponentEnable("PacketSink", LOG_LEVEL_ALL);          
     // LogComponentEnable("TcpL4Protocol", LOG_LEVEL_ALL);    
-    LogComponentEnable("TcpSocketBase", LOG_LEVEL_ALL);
+    // LogComponentEnable("TcpSocketBase", LOG_LEVEL_ALL);
     
     NS_LOG_INFO("Creating nodes...");
     NodeContainer senders, router, receiver;
