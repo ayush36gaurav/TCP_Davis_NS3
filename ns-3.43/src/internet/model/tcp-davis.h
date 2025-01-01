@@ -90,7 +90,7 @@ namespace ns3
 
             // Control variables
             const uint32_t TCP_INFINITE_SSTHRESH = std::numeric_limits<uint32_t>::max();
-            bool m_isInSlowStart{true};
+            bool m_isInSlowStart{false};
 
             uint64_t m_delivered{0}; // Number of packets delivered and it is used to find BDP using the interval
             Time m_interval{Seconds(0)};
