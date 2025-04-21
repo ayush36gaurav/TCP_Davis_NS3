@@ -13,6 +13,7 @@
 #include "tcp-congestion-ops.h" // tcp-socket-state and tcp-rate-ops are included in this file
 #include "ns3/traced-value.h"
 #include "ns3/nstime.h"
+#include "ns3/random-variable-stream.h"
 #include <limits>
 #include <cstdint>
 
@@ -57,26 +58,36 @@ namespace ns3
             Ptr<TcpCongestionOps> Fork() override;
             // Only two functions increaseWindow and PktsAcked are not overridden here
 
+            Time m_minRTT; // m_minRtt and m_minlastRtt also there in tcp-socket-state.h
+            DavisMode_t m_mode{DAVIS_GAIN1};
+            uint32_t m_bdp;
+            uint32_t m_gainCwnd;
+            bool m_isInSlowStart{false};
+            uint32_t m_lastBdp;
+
         protected:
             // Make the test class as friend
             friend class TcpDavisLinuxCheckGainValuesTest;
 
             void SlowStart(Ptr<TcpSocketState> tcb, const TcpRateOps::TcpRateConnection& rc, const TcpRateOps::TcpRateSample& rs);
             void CongestionAvoidance(Ptr<TcpSocketState> tcb, const TcpRateOps::TcpRateConnection& rc, const TcpRateOps::TcpRateSample& rs);
-            void EnterDrain();
-            void EnterGain1();
-            void EnterGain2(); 
+            // void EnterDrain();
+            // void EnterGain1();
+            // void EnterGain2(); 
             void UpdateGainCwnd();
             void EnterSlowStart(Ptr<TcpSocketState> tcb);
-            void ExitSlowStart(Ptr<TcpSocketState> tcb);
+            // void ExitSlowStart(Ptr<TcpSocketState> tcb);
 
         private:
             //  Static variables in the Linux module
             uint32_t m_minCwnd{4};
+            uint32_t m_maxCwnd{33554432};
 
             uint32_t m_minGainCwnd{4};
-            uint32_t m_reactivity{DAVIS_ONE/8};
-            uint32_t m_sensitivity{DAVIS_ONE/64};
+            // uint32_t m_reactivity{DAVIS_ONE/8};
+            // uint32_t m_sensitivity{DAVIS_ONE/64};
+            double m_reactivity{0.125};
+            double m_sensitivity{0.015625};
 
             uint32_t m_drainRtts{2};
             uint32_t m_stableRttsMin{3};
@@ -84,33 +95,36 @@ namespace ns3
             uint32_t m_gainOneRtts{2};
             uint32_t m_gainTwoRtts{1};
 
-            const uint32_t RTT_INF = std::numeric_limits<uint32_t>::max();
+            // const uint32_t RTT_INF = std::numeric_limits<uint32_t>::max();
+            Time RTT_INF{Seconds(10)};
             Time m_rttTimeout{Seconds(10)}; // Check if this need to be kept in milliseconds
             
 
             // Part of the Davis structure
-            DavisMode_t m_mode{DAVIS_GAIN1};
+            // DavisMode_t m_mode{DAVIS_GAIN1};
             Time m_lastModeChange;
             Time m_minRttTime;
             Time m_deliveredStartTime;
 
             uint32_t m_deliveredStart; // Keeps the number of packets delivered at the start of the mode
 
-            uint32_t m_bdp;
-            uint32_t m_lastBdp;
-            uint32_t m_gainCwnd;
+            // uint32_t m_bdp;
+            // uint32_t m_lastBdp;
+            // uint32_t m_gainCwnd;
 
             uint32_t m_stableRtts;
 
             Time m_lastRTT;
-            Time m_minRTT; // m_minRtt and m_minlastRtt also there in tcp-socket-state.h
+            // Time m_minRTT; // m_minRtt and m_minlastRtt also there in tcp-socket-state.h
 
             // Control variables
             const uint32_t TCP_INFINITE_SSTHRESH = std::numeric_limits<uint32_t>::max();
-            bool m_isInSlowStart{false};
 
             uint64_t m_delivered{0}; // Number of packets delivered and it is used to find BDP using the interval
             Time m_interval{Seconds(0)};
+
+            Ptr<UniformRandomVariable> m_rand;
+            uint32_t m_mss{512};
     };
 }
 #endif // TCPDAVIS_H

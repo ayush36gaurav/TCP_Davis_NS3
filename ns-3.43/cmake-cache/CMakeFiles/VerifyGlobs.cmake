@@ -6,14 +6,14 @@ cmake_policy(SET CMP0009 NEW)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/**")
 set(OLD_GLOB
   "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/.vscode"
+  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/CMakeFiles"
   "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/CMakeLists.txt"
-  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/check.cc"
-  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/davis-paper-simulation.cc"
+  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/Makefile"
+  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/cmake_install.cmake"
+  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/myscript.cc"
   "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/nested-subdir"
-  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/scratch-simulator.cc"
+  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/simulation.cc"
   "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/subdir"
-  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/tcp-bbr-simulation.cc"
-  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/tcp-davis-simulation.cc"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -29,14 +29,20 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/CMakeFiles/cmake.verify_globs")
 endif()
 
+# scratch_sources at scratch/CMakeLists.txt:108 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/CMakeFiles/[^.]*.cc")
+set(OLD_GLOB
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/CMakeFiles/cmake.verify_globs")
+endif()
+
 # single_source_file_scratches at scratch/CMakeLists.txt:77 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/[^.]*.cc")
 set(OLD_GLOB
-  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/check.cc"
-  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/davis-paper-simulation.cc"
-  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/scratch-simulator.cc"
-  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/tcp-bbr-simulation.cc"
-  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/tcp-davis-simulation.cc"
+  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/myscript.cc"
+  "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/scratch/simulation.cc"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

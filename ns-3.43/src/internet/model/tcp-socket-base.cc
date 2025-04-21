@@ -528,6 +528,17 @@ TcpSocketBase::~TcpSocketBase()
     CancelAllTimers();
 }
 
+
+Ptr<TcpSocketState> TcpSocketBase::GetTcpState() const
+{
+    return m_tcb;
+}
+
+Ptr<TcpCongestionOps> TcpSocketBase::GetCongestionControl() const
+{
+    return m_congestionControl;
+}
+
 /* Associate a node with this TCP socket */
 void
 TcpSocketBase::SetNode(Ptr<Node> node)

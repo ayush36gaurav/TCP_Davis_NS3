@@ -4,12 +4,21 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build",
+            "label": "build_ns3",
             "type": "shell",
-            "command": "./ns3",
+            "command": "./ns3 build",
             "group": {
                 "kind": "build",
                 "isDefault": true
+            }
+        },
+        {
+            "label": "configure_ns3",
+            "type": "shell",
+            "command": "./ns3 configure --enable-examples --enable-tests",
+            "group": {
+                "kind": "build",
+                "isDefault": false
             }
         },
         {

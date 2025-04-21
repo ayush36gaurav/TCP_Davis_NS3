@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build/include",
+                "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/src",
+                "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/src/traffic-control/model",
+                "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/src/internet/model",
+                "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/src/network/model",
+                "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/src/point-to-point/model"
+                // "/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/ns3"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang-18",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}

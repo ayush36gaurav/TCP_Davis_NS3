@@ -970,11 +970,8 @@
 /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/examples/wireless/CMakeFiles/install.dir
 /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/examples/wireless/CMakeFiles/install/local.dir
 /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/examples/wireless/CMakeFiles/install/strip.dir
-/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/scratch/CMakeFiles/scratch_check.dir
-/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/scratch/CMakeFiles/scratch_davis-paper-simulation.dir
-/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/scratch/CMakeFiles/scratch_scratch-simulator.dir
-/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/scratch/CMakeFiles/scratch_tcp-bbr-simulation.dir
-/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/scratch/CMakeFiles/scratch_tcp-davis-simulation.dir
+/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/scratch/CMakeFiles/scratch_myscript.dir
+/home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/scratch/CMakeFiles/scratch_simulation.dir
 /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir
 /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/scratch/CMakeFiles/edit_cache.dir
 /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/cmake-cache/scratch/CMakeFiles/rebuild_cache.dir

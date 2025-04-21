@@ -1,5 +1,5 @@
 ---- Summary of ns-3 settings:
-Build profile                 : default
+Build profile                 : debug
 Build directory               : /home/ayush-gaurav/ns-allinone-3.43/ns-3.43/build
 Build with runtime asserts    : [32mON[0m
 Build with runtime logging    : [32mON[0m
@@ -42,6 +42,7 @@ traffic-control           uan                       virtual-net-device
 wifi                      wimax                     
 
 Modules that cannot be built:
-brite                     click                     mpi                       
-openflow                  visualizer                
+CMakeFiles                brite                     click                     
+mpi                       openflow                  visualizer                
+
 

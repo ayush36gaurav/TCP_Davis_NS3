@@ -667,6 +667,9 @@ class TcpSocketBase : public TcpSocket
                                            const Address& peerAddr,
                                            const Ptr<const TcpSocketBase> socket);
 
+    Ptr<TcpSocketState> GetTcpState() const;
+    Ptr<TcpCongestionOps> GetCongestionControl() const;
+
   protected:
     // Implementing ns3::TcpSocket -- Attribute get/set
     // inherited, no need to doc
